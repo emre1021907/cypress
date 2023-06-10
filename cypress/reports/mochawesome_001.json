@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-06-10T09:24:59.637Z",
+    "end": "2023-06-10T09:25:18.420Z",
+    "duration": 18783,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "112dcc0f-1f4e-426d-b56c-97c64b7c1a3a",
+      "title": "",
+      "fullFile": "cypress/integration/my_first_script.js",
+      "file": "cypress/integration/my_first_script.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "google test",
+          "fullTitle": "google test",
+          "timedOut": null,
+          "duration": 8269,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.google.com/');\ncy.get('.gLFyf').type(\"hava durumu{enter}\");\ncy.contains('Görseller').click(); //cy.get('.gLFy2f',{timeout: 6000}).type(\"hava durumu{enter}\")\n//cy.get('[href=\"https://www.mgm.gov.tr/tahmin/il-ve-ilceler.aspx\"] > .LC20lb').click()",
+          "err": {},
+          "uuid": "6971ca9e-7c3b-4579-920f-39bca37f3ed2",
+          "parentUUID": "112dcc0f-1f4e-426d-b56c-97c64b7c1a3a",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "login",
+          "fullTitle": "login",
+          "timedOut": null,
+          "duration": 6671,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com/\");\ncy.get('#txtUsername').type(\"Admin\");\ncy.get('#txtPassword').type(\"admin123\");\ncy.get('#btnLogin').click();\ncy.get('#menu_admin_viewAdminModule > b').click();\ncy.get('tbody > :nth-child(1) > :nth-child(2) > a').should('contain', 'Admin');\ncy.get(':nth-child(1) > label').should('contain', \"Username\");\ncy.get('.toggle').should('have.class', \"toggle tiptip\");\ncy.get('#frmList_ohrmListComponent').invoke('attr', \"id\").should('equal', \"frmList_ohrmListComponent\");",
+          "err": {
+            "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `#txtUsername`, but never found it.",
+            "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `#txtUsername`, but never found it.\n    at Context.eval (https://opensource-demo.orangehrmlive.com/__cypress/tests?p=cypress\\integration\\my_first_script.js:108:6)",
+            "diff": null
+          },
+          "uuid": "eabfa508-ac9b-426b-b52b-8b76b267fde7",
+          "parentUUID": "112dcc0f-1f4e-426d-b56c-97c64b7c1a3a",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "6971ca9e-7c3b-4579-920f-39bca37f3ed2"
+      ],
+      "failures": [
+        "eabfa508-ac9b-426b-b52b-8b76b267fde7"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 14940,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
